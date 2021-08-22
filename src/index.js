@@ -4,9 +4,12 @@ import './index.css';
 import Card from './Card';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
+import { robots } from './robots';
 
 ReactDOM.render(
-  <Card />,
+  <div>
+    {robots.map(robot => <Card id={robot.id} name={robot.name} email={robot.email} />)}
+  </div>,
   document.getElementById('root')
 );
 
